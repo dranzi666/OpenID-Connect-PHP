@@ -1069,6 +1069,8 @@ class OpenIDConnectClient
 
         }
 
+        $headers[] = "User-Agent: Java";
+        
         // If we set some headers include them
         if(count($headers) > 0) {
             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
